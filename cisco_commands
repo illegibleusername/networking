@@ -1,11 +1,11 @@
 # CISCO COMMANDS
 
-| USER EXEC COMMANDS | '''Router1>''' |
+| USER EXEC COMMANDS | `Router1>` |
 | ------------------ | -------------- |
-| '''enable''' | enables priveleged exec mode ('''en''')|
+| `enable` | enables priveleged exec mode (`en`)|
 
-## PRIVILEGED EXEC COMMANDS
-'''Router1#'''
+| PRIVILEGED EXEC COMMANDS | `Router1#` |
+| ------------------------ | ---------- |
 disable -------------------------- exit priveleged exec mode
 configure terminal (config t) ---- goes from priveleged exec to global exec *Router1# to Router1(config)#
 show running-config -------------- shows running config
