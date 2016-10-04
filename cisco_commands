@@ -1,1 +1,17 @@
-=CISCO COMMANDS=
+# CISCO COMMANDS
+
+| USER EXEC COMMANDS | '''Router1>''' |
+| ------------------ | -------------- |
+| '''enable''' | enables priveleged exec mode ('''en''')|
+
+## PRIVILEGED EXEC COMMANDS
+'''Router1#'''
+disable -------------------------- exit priveleged exec mode
+configure terminal (config t) ---- goes from priveleged exec to global exec *Router1# to Router1(config)#
+show running-config -------------- shows running config
+copy running-config startup-config (copy run start) --- saves current config 
+show ip route -------------------- shows address table
+show arp ------------------------- shows arp table
+show mac-address-table------------ shows MAC table
+show ip int ---------------------- shows all IP interfaces and statistics
+show <int>------------------------ shows status of specific interface
