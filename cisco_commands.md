@@ -1,6 +1,6 @@
 # CISCO COMMANDS
 
-Configure the device | Switch
+CONFIGURE THE DEVICE | Switch
 ------------------ | --------------
 `Switch>enable` | enables privileged EXEC mode
 `Switch#config terminal` | enables global EXEC mode
@@ -22,7 +22,7 @@ Configure the device | Switch
 `S1(config-if)#ip default-gateway dotted-decimal` | Assign default gateway for SVI management interface
 `S1(config-if)#exit` | Return to privileged EXEC mode
 
-VERIFY THE CONFIGURATION OF THE SWITCH | |
+VERIFY THE CONFIGURATION OF THE DEVICE | |
 -------------------------------------- | ------ |
 `S1#show running-configuration` | Display current running configuration in RAM
 `S1#copy running-config startup-config` | Copy running configuration to NVRAM to remain in place on reload
