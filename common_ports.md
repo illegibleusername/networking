@@ -7,7 +7,7 @@ PORT NUMBER | PROTOCOL/APPLICATION | PORT NUMBER | PROTOCOL/APPLICATION
 **23** | **[Telnet](https://en.wikipedia.org/wiki/Telnet)** | 25 | [SMTP](https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol)
 42 | [WINS](https://en.wikipedia.org/wiki/Windows_Internet_Name_Service) | 43 | [WHOIS](https://en.wikipedia.org/wiki/WHOIS)
 49 | [TACACS+](https://en.wikipedia.org/wiki/TACACS%2B) | **53** | **[DNS](https://en.wikipedia.org/wiki/Domain_Name_System)**
-67-68 | [BOOTP](https://en.wikipedia.org/wiki/Bootstrap_Protocol)/[DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) | 69 | [TFTP](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
+**67-68** | [BOOTP](https://en.wikipedia.org/wiki/Bootstrap_Protocol)/**[DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)** | 69 | [TFTP](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
 **80** | **[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)** | 88 | [Kerberos](https://en.wikipedia.org/wiki/Kerberos_(protocol))
 110 | [POP3](https://en.wikipedia.org/wiki/Post_Office_Protocol) | 115 (TCP) | [SFTP](https://en.wikipedia.org/wiki/Simple_File_Transfer_Protocol)
 123 | [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol) | 137-139 | [NetBIOS](https://en.wikipedia.org/wiki/NetBIOS)
