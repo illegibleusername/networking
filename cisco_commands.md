@@ -2,6 +2,7 @@
 
 CONFIGURE THE DEVICE | Switch
 -------------------- | ------
+Initial configuration and security settings |
 `Switch>enable` | Enables privileged EXEC mode
 `Switch#config terminal` | Enables global EXEC mode
 `Switch(config)#hostname S1` | Assign a hostname to a device, in this case S1
@@ -22,13 +23,16 @@ CONFIGURE THE DEVICE | Switch
 `S1(config-line)#logging synchronous` | Enable logging synchronous
 `S1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
 `S1(config-line)#exit` | Return to privileged EXEC mode
-`S1(config)#interface vlan 1` | Enter the interface configuration mode for VLAN 1 SVI management interface
-`S1(config-if)#ip address dotted-decimal subnet-mask` | Set the IP address, subnet mask for the SVI management interface
+Configure SVI management interface on VLAN 1 |
+`S1(config)#interface vlan 1` | Enter the interface configuration mode for VLAN 1 
+`S1(config-if)#ip address 192.168.1.1 255.255.255.240` | Set the IP address, subnet mask
 `S1(config-if)#no shutdown` | Set the interface administratively up
-`S1(config)#default-gateway` | Configure a default gateway
+Advanced configurations | 
+`S1(config)#default-gateway 192.168.0.1` | Configure a default gateway
 
 CONFIGURE THE DEVICE | Router
 -------------------- | ------
+Initial configuration and security settings |
 `Router>enable` | Enables privileged EXEC mode
 `Router#config terminal` | Enables global EXEC mode
 `Router(config)#hostname R1` | Assign a hostname to a device, in this case R1
@@ -42,16 +46,27 @@ CONFIGURE THE DEVICE | Router
 `R1(config-line)#login` | Configure the console line to require a password at user EXEC mode login
 `R1(config-line)#logging synchronous` | Enable logging synchronous
 `R1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
-`R1(config-line)#line vty 0 15` | Enable VTY line configuration mode
+`R1(config-line)#line vty 0 4` | Enable VTY line configuration mode
 `R1(config-line)#password cisco` | Set the VTY password to cisco
 `R1(config-line)#login` | Configure the VTY line to require a password at Telnet/SSH login
 `R1(config-line)#logging synchronous` | Enable logging synchronous
 `R1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
 `R1(config-line)#exit` | Return to privileged EXEC mode
-`R1(config)#interface type-and-number` | Configure desired interface (FE, GE, S, etc)
-`R1(config-if)#description description-text` | Describe the interface
-`R1(config-if)#ip address ipv4-address subnet-mask` | Assign an IPv4 address and subnet mask to the interface
+Configure Interfaces |
+`R1(config)#interface S 0/0/0` | Configure Serial interface
+`R1(config-if)#description Serial interface for R1` | Describe the interface as 'Serial interface for R1'
+`R1(config-if)#ip address 192.168.1.17 255.255.255.240` | Assign an IPv4 address and subnet mask to the interface
 `R1(config-if)#no shutdown` | Set the interface administratively up
+`R1(config-if)#exit` | Return to privileged EXEC mode
+Enable SSH |
+`R1(config)#ip domain-name example.com` | Configure the IP domain name of the network
+`R1(config)#crypto key generate rsa general-keys modulus 1024` | Generate SSH secret key modulus 1024
+`R1(config)#username Student secret cisco` | Create a local database username entry
+`R1(config)#line vty 0 4` | Enable VTY line configuration mode
+`R1(config-line)#login local` | Enable password checking at login
+`R1(config-line)#transport input ssh` | Disable non-SSH access to line vty
+`R1(config-line)#exit` | Return to privileged EXEC mode
+
 
 messing with config files |
 -------------------------------------- | --- |
