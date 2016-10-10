@@ -2,7 +2,7 @@
 
 CONFIGURE THE DEVICE | Switch
 -------------------- | ------
-Initial configuration and security settings |
+_**Initial configuration and security settings**_ |
 `Switch>enable` | Enables privileged EXEC mode
 `Switch#config terminal` | Enables global EXEC mode
 `Switch(config)#hostname S1` | Assign a hostname to a device, in this case S1
@@ -23,16 +23,16 @@ Initial configuration and security settings |
 `S1(config-line)#logging synchronous` | Enable logging synchronous
 `S1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
 `S1(config-line)#exit` | Return to privileged EXEC mode
-Configure SVI management interface on VLAN 1 |
+_**Configure SVI management interface on VLAN 1**_ |
 `S1(config)#interface vlan 1` | Enter the interface configuration mode for VLAN 1 
 `S1(config-if)#ip address 192.168.1.1 255.255.255.240` | Set the IP address, subnet mask
 `S1(config-if)#no shutdown` | Set the interface administratively up
-Advanced configurations | 
+_**Advanced configurations**_ | 
 `S1(config)#default-gateway 192.168.0.1` | Configure a default gateway
 
 CONFIGURE THE DEVICE | Router
 -------------------- | ------
-Initial configuration and security settings |
+_**Initial configuration and security settings**_ |
 `Router>enable` | Enables privileged EXEC mode
 `Router#config terminal` | Enables global EXEC mode
 `Router(config)#hostname R1` | Assign a hostname to a device, in this case R1
@@ -52,13 +52,13 @@ Initial configuration and security settings |
 `R1(config-line)#logging synchronous` | Enable logging synchronous
 `R1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
 `R1(config-line)#exit` | Return to privileged EXEC mode
-Configure Interfaces |
+_**Configure Interfaces**_ |
 `R1(config)#interface S 0/0/0` | Configure Serial interface
 `R1(config-if)#description Serial interface for R1` | Describe the interface as 'Serial interface for R1'
 `R1(config-if)#ip address 192.168.1.17 255.255.255.240` | Assign an IPv4 address and subnet mask to the interface
 `R1(config-if)#no shutdown` | Set the interface administratively up
 `R1(config-if)#exit` | Return to privileged EXEC mode
-Enable SSH |
+_**Enable SSH login**_ |
 `R1(config)#ip domain-name example.com` | Configure the IP domain name of the network
 `R1(config)#crypto key generate rsa general-keys modulus 1024` | Generate SSH secret key modulus 1024
 `R1(config)#username Student secret cisco` | Create a local database username entry
