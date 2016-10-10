@@ -8,6 +8,8 @@ CONFIGURE THE DEVICE | Switch
 `S1(config)#banner motd #This is a MOTD banner#` | Configure a MOTD Banner
 `S1(config)#no ip domain-lookup` | Disable automatic domain lookup
 `S1(config)#service password-encryption` | Encrypt passwords in the config file
+`S1(config)#security passwords min-length` | Ensure that all configured passwords are a minimum of a specified length
+`S1(config)# login block-for 120 attempts 3 within 60` | Block login attempts for 120 seconds if there are three failed login attempts within 60 seconds
 `S1(config)#enable secret class` | Set the privileged EXEC mode secret password to class
 `S1(config)#line console 0` | Enable console line configuration mode
 `S1(config-line)#password cisco` | Set the console password to cisco
@@ -26,7 +28,10 @@ CONFIGURE THE DEVICE | Router
 -------------------- | ------
 `Router>enable` | Enables privileged EXEC mode
 `Router#config terminal` | Enables global EXEC mode
-`Router(config)#hostname R1` | Assign a hostname to a device, in this case R1
+`Router(config)#hostname R1` | Assign a hostname to a device, in this case R1`S1(config)#service password-encryption` | Encrypt passwords in the config file
+`R1(config)#security passwords min-length` | Ensure that all configured passwords are a minimum of a specified length
+`R1(config)# login block-for 120 attempts 3 within 60` | Block login attempts for 120 seconds if there are three failed login attempts within 60 seconds
+`R1(config)#enable secret class` | Set the privileged EXEC mode secret password to class
 `R1(config)#line console 0` | Enable console line configuration mode
 `R1(config-line)#password cisco` | Set the console password to cisco
 `R1(config-line)#login` | Configure the console line to require a password at user EXEC mode login
@@ -35,8 +40,6 @@ CONFIGURE THE DEVICE | Router
 `R1(config-line)#password cisco` | Set the VTY password to cisco
 `R1(config-line)#login` | Configure the VTY line to require a password at Telnet/SSH login
 `R1(config-line)#exit` | Return to privileged EXEC mode
-`R1(config)#enable secret class` | Set the privileged EXEC mode secret password to class
-`R1(config)#service password-encryption` | Encrypt passwords in the config file
 `R1(config)#banner motd #This is a MOTD banner#` | Configure a MOTD Banner
 `R1(config)#interface type-and-number` | Configure desired interface (FE, GE, S, etc)
 `R1(config-if)#description description-text` | Describe the interface
