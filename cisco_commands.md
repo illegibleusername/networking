@@ -82,4 +82,10 @@ VERIFY THE CONFIGURATION OF THE DEVICE | Assorted
 `Router1#show ip interface` | Displays the IPv4 statistics for all interfaces on a router
 `Router1#show ip interface brief` | Displays all interfaces, their IPv4 address, and their current status
 `Router1#show interfaces` | Displays statistics for all interfaces on the device
-`Router1#ping ipv4-address` | Ping the desired IPv4 address
+`Router1#ping 123.456.789.10` | Ping the desired IPv4 address
+`Router1#show file systems` | Lists all of the available file systems
+`Router1#show protocols` | Displays status and interfaces for desired protocol
+`Router1#show version` | Displays system information
+`Router1#show cdp neighbors (detail)` | Displays detailed information about neighboring devices discovered using Cisco Discovery Protocol (CDP)
+`Router1#no cdp run` | Disable CDP globally
+`Router1(config-if)#no cdp enable` | Disable CDP on an interface
