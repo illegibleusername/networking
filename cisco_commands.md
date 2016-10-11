@@ -28,7 +28,7 @@ _**Configure SVI management interface on VLAN 1**_ |
 `S1(config-if)#ip address 192.168.1.1 255.255.255.240` | Set the IP address, subnet mask
 `S1(config-if)#no shutdown` | Set the interface administratively up
 _**Advanced configurations**_ | 
-`S1(config)#default-gateway 192.168.0.1` | Configure a default gateway
+`S1(config)#ip default-gateway 192.168.0.1` | Configure a default gateway
 
 CONFIGURE THE DEVICE | Router
 -------------------- | ------
