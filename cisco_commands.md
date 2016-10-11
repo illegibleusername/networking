@@ -61,7 +61,7 @@ _**Configure Interfaces**_ |
 _**Enable SSH login**_ |
 `R1(config)#ip domain-name example.com` | Configure the IP domain name of the network
 `R1(config)#crypto key generate rsa general-keys modulus 1024` | Generate SSH secret key modulus 1024
-`R1(config)#username Student secret cisco` | Create a local database username entry
+`R1(config)#username Student privilege 15 secret cisco` | Create a local database username entry with root privilege
 `R1(config)#line vty 0 4` | Enable VTY line configuration mode
 `R1(config-line)#login local` | Enable password checking at login
 `R1(config-line)#transport input ssh` | Disable non-SSH access to line vty
