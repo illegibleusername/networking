@@ -56,6 +56,7 @@ _**Configure Interfaces**_ |
 `R1(config)#interface S 0/0/0` | Configure Serial interface
 `R1(config-if)#description Serial interface for R1` | Describe the interface as 'Serial interface for R1'
 `R1(config-if)#ip address 192.168.1.17 255.255.255.240` | Assign an IPv4 address and subnet mask to the interface
+`R1(config-if)#ipv6 address 2001:DB8:ACAD::1/64` | Assign an IPv6 address and subnet mask to the interface
 `R1(config-if)#no shutdown` | Set the interface administratively up
 `R1(config-if)#exit` | Return to privileged EXEC mode
 _**Enable SSH login**_ |
