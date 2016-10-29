@@ -1,0 +1,6 @@
+{
+  "name": "Networking",
+  "tagline": "Networking study guides and cheat sheets",
+  "body": "# Networking\r\n## Networking study guides and cheat sheets\r\n\r\nEntry/CCENT-level study guides i'm making/using for my studies.\r\n\r\n[Common Ports](common_ports.md) is a table of commonly used ports in the well-known ports range (0 - 1023)\r\n\r\n[Cheat Sheets](cheat_sheets.md) has assorted guides, tables, sheets and references\r\n\r\n[CISCO Commands](cisco_commands.md) has a step-by-step guide for basic switch and router configuration\r\n\r\nOSI Model references:\r\n* Layer 1 - Physical\r\n* Layer 2 - Data Link\r\n* [Layer 3 - Network](layer_3.md)\r\n* Layer 4 - Transport\r\n* Layer 5 - Session\r\n* Layer 6 - Presentation\r\n* Layer 7 - Application\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
