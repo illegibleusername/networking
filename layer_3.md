@@ -1,3 +1,20 @@
+# Layer 3 - [Network](https://en.wikipedia.org/wiki/Network_layer)
+
+
+Functions of the network layer include:
+* [Connectionless](https://en.wikipedia.org/wiki/Connectionless_communication) communication
+* Host addressing
+* Message forwarding
+
+
+Common protocols include:
+* ICMP, [Internet Control Message Protocol](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol)
+* IGMP, [Internet Group Management Protocol](https://en.wikipedia.org/wiki/IGMP)
+* IPsec, [Internet Protocol Security](https://en.wikipedia.org/wiki/IPsec)
+* IP, [Internet Protocol](https://en.wikipedia.org/wiki/Internet_Protocol)
+* RIP, [Routing Information Protocol](https://en.wikipedia.org/wiki/Routing_Information_Protocol)
+
+
 [IPv4 Packet Header](https://en.wikipedia.org/wiki/IPv4#Packet_structure) | 20-40 octets(128-256 bits) |   |   |   |
 ----------- | --- | --- | --- | --- |
 Version | IHL | DSCP | ECN | Total length |
