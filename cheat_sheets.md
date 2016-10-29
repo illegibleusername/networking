@@ -1,6 +1,6 @@
 # Random
 
-### Routing Table
+### Routing Table (R 172.16.4.0/28 \[120/2\] via 209.165.200.226, 00:00:12, Serial0/0/0)
 R | 172.16.4.0/28 | \[120 | /2\] | via 209.165.200.226, | 00:00:12, | Serial0/0/0
 --- | ----------- | ----- | ---- | -------------------- | --------- | -----------
 Route Source | Destination Network | Administrative Distance | Metric | Next-hop | Route Timestamp | Outgoing Interface
