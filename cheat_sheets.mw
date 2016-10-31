@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="random">Random</h1>
+<h3 id="routing-table">Routing Table</h3>
+<table style="width:97%;">
+<colgroup>
+<col width="5%" />
+<col width="16%" />
+<col width="8%" />
+<col width="6%" />
+<col width="29%" />
+<col width="13%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>R</th>
+<th>172.16.4.0/28</th>
+<th>[120</th>
+<th>/2]</th>
+<th>via 209.165.200.226,</th>
+<th>00:00:12,</th>
+<th>Serial0/0/0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Route Source</td>
+<td>Destination Network</td>
+<td>Administrative Distance</td>
+<td>Metric</td>
+<td>Next-hop</td>
+<td>Route Timestamp</td>
+<td>Outgoing Interface</td>
+</tr>
+<tr class="even">
+<td>Identifies how the route was learned (C = connected, L = local, S = static, D = EIGRP)</td>
+<td>Identifies the address of the remote network</td>
+<td>Identifies the trustworthiness of the route source</td>
+<td>Identifies the value assigned to reach the remote network. Lower values indicate preferred routes</td>
+<td>Identifies the IPv4 address of the next router to forward the packet to</td>
+<td>Identifies from when the route was last heard</td>
+<td>Identifies the exit interface to use to forward a packet toward the final destination</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
