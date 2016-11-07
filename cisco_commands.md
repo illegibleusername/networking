@@ -4,31 +4,41 @@ CONFIGURE THE DEVICE | Switch
 -------------------- | ------
 _**Initial configuration and security settings**_ |
 `Switch>enable` | Enables privileged EXEC mode
-`Switch#config terminal` | Enables global EXEC mode
-`Switch(config)#hostname S1` | Assign a hostname to a device, in this case S1
-`S1(config)#banner motd #This is a MOTD banner#` | Configure a MOTD Banner
-`S1(config)#no ip domain-lookup` | Disable automatic domain lookup
+`Switch#config terminal` | Enables global config mode
+`Switch(config)#hostname S1` | Assign hostname to a device (S1)
 `S1(config)#service password-encryption` | Encrypt passwords in the config file
-`S1(config)#security passwords min-length` | Ensure that all configured passwords are a minimum of a specified length
+`S1(config)#security passwords min-length 5` | Ensure that all configured passwords are a minimum of a specified length (5)
 `S1(config)# login block-for 120 attempts 3 within 60` | Block login attempts for 120 seconds if there are three failed login attempts within 60 seconds
 `S1(config)#enable secret class` | Set the privileged EXEC mode secret password to class
-`S1(config)#line console 0` | Enable console line configuration mode
+`S1(config)#no ip domain-lookup` | Disable automatic domain lookup
+`S1(config)#banner motd #This is a MOTD banner#` | Configure a MOTD Banner
+|
+_**Configure lines**_ |
+`S1(config)#line console 0` | Enable configuration mode for console line 0
 `S1(config-line)#password cisco` | Set the console password to cisco
 `S1(config-line)#login` | Configure the console line to require a password at user EXEC mode login
 `S1(config-line)#logging synchronous` | Enable logging synchronous
 `S1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
-`S1(config-line)#line vty 0 15` | Enable VTY line configuration mode
+`S1(config-line)#line vty 0 15` | Enable configuration mode for VTY line 0-15
 `S1(config-line)#password cisco` | Set the VTY password to cisco
 `S1(config-line)#login` | Configure the VTY line to require a password at Telnet/SSH login
 `S1(config-line)#logging synchronous` | Enable logging synchronous
 `S1(config-line)#exec-timeout 10` | Automatically disconnect users on a line after they have been idle for the duration of the exec timeout value
 `S1(config-line)#exit` | Return to privileged EXEC mode
-_**Configure SVI management interface on VLAN 1**_ |
-`S1(config)#interface vlan 1` | Enter the interface configuration mode for VLAN 1 
-`S1(config-if)#ip address 192.168.1.1 255.255.255.240` | Set the IP address, subnet mask
-`S1(config-if)#no shutdown` | Set the interface administratively up
-_**Advanced configurations**_ | 
-`S1(config)#ip default-gateway 192.168.0.1` | Configure a default gateway
+|
+_**Configure SVI management interface on VLAN 99**_ |
+`S1(config)# vlan 99` | Create VLAN 99
+`S1(config-vlan)# name vlan_name` | Configure name for VLAN 99
+` S1(config-vlan)# exit` | Return to global config mode
+`S1(config)#interface vlan 99` | Enter the interface config mode for VLAN 99 
+`S1(config-if)#ip address 192.168.1.1 255.255.255.240` | Configure management interface IP address
+`S1(config-if)#no shutdown` | Enable management interface
+`S1(config-if)# switchport access vlan 99` | 
+`S1(config-if)#exit` | Return to global config mode
+`S1(config)#ip default-gateway 192.168.0.1` | Configure a default gateway for the device
+`S1(config)#interface range f0/1 – 24,g0/1 - 2` | Enter interface range configuration mode
+`S1(config-if-range)#switchport access vlan 99` | 
+
 
 CONFIGURE THE DEVICE | Router
 -------------------- | ------
@@ -90,3 +100,4 @@ VERIFY THE CONFIGURATION OF THE DEVICE | Assorted
 `Router1#show cdp neighbors (detail)` | Displays detailed information about neighboring devices discovered using Cisco Discovery Protocol (CDP)
 `Router1#no cdp run` | Disable CDP globally
 `Router1(config-if)#no cdp enable` | Disable CDP on an interface
+`S1#show vlan brief` | Display information about all VLANs
