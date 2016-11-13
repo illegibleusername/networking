@@ -2,14 +2,25 @@
 
 CONFIGURE THE DEVICE | Switch
 -------------------- | ------
-_**Initial configuration and security settings**_ |
-`Switch>enable` | Enables privileged EXEC mode
-`Switch#config terminal` | Enables global config mode
-`Switch(config)#hostname S1` | Assign hostname to a device (S1)
-`S1(config)#service password-encryption` | Encrypt passwords in the config file
+_**Verify the default switch configuration**_ |
+`Switch> enable` | Enables privileged EXEC mode
+`Switch# show running-config` | Display current running configuration from RAM
+`Switch# show startup-config` | Display current default configuration from NVRAM
+`Switch# show interface vlan1` | Display configuration of SVI on VLAN 1
+`Switch# show ip interface vlan1` | Display IP configuration of SVI VLAN 1
+`Switch# show version` | Display IOS version information
+`Switch# show interface f0/6` | Display configuration of interface _f0/6_
+`Switch# show vlan` | Display VLAN configuration
+`Switch# show flash` | Display contents of flash drectory
+`Switch# dir flash:` | Display contents of flash drectory
+|
+_**Configure basic switch settings**_ |
+`Switch# configure terminal` | Enables global config mode
+`Switch(config)# hostname S1` | Assign hostname _S1_ to device
+`S1(config)# service password-encryption` | Encrypt passwords in the config file
 `S1(config)#security passwords min-length 5` | Ensure that all configured passwords are a minimum of a specified length (5)
 `S1(config)# login block-for 120 attempts 3 within 60` | Block login attempts for 120 seconds if there are three failed login attempts within 60 seconds
-`S1(config)#enable secret class` | Set the privileged EXEC mode secret password to class
+`S1(config)# enable secret class` | Set the privileged EXEC mode secret to _class_
 `S1(config)#no ip domain-lookup` | Disable automatic domain lookup
 `S1(config)#banner motd #This is a MOTD banner#` | Configure a MOTD Banner
 |
