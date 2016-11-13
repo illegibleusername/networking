@@ -81,8 +81,7 @@ Messing with MAC tables |
 --- | --- |
 `S1# show mac address-table ?` | Display currently known MAC addresses
 `S1# clear mac address-table ?` | Remove existing MAC addresses
-`S1(config)# mac address-table static 0050.56BE.6C89 vlan 666 interface
-fastethernet 0/6` | Create static mapping of MAC address _**0050.56BE.6C89**_ to _**VLAN 666**_ on _**f0/6**_
+`S1(config)# mac address-table static 0050.56BE.6C89 vlan 666 interface f0/6` | Create static mapping of MAC address _**0050.56BE.6C89**_ to _**VLAN 666**_ on _**f0/6**_
 
 
 
