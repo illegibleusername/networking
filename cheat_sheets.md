@@ -12,3 +12,12 @@ Identifies how the route was learned (C = connected, L = local, S = static, D = 
 4. Boot loader initializes the flash file system
 5. Boot loader loads an IOS image into RAM
 6.  IOS initializes interfaces using the IOS commands found in startup-config in NVRAM
+
+
+### Router Memory ###
+Memory | Volatility | Stores
+--- | --- | ---
+RAM | Volatile | Running IOS, config, IP routing/ARP tables, packet buffer
+ROM | Non-volatile | Bootup instructions, basic diagnostic software, limited IOS
+NVRAM | Non-volatile | Startup-config
+Flash | Non-volatile | IOS, system files
