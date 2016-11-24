@@ -120,6 +120,20 @@ _**Configure Interfaces**_ |
 `R1(config-if)# no shutdown` | Set interface administratively up
 `R1(config-if)# exit` |
 |
+_**Configure RIP**_ |
+`R1(config)# router rip `| Enable RIP protocol on the router
+`R1(config)# no router rip` | Disable the RIP protocol on the router
+`R1(config-router)# network 123.456.12.456` | Enable RIP for the specified network 123.456.123.456
+`R1(config-router)# version 2`| Enable RIP version 2
+`R1(config-router)# no auto-summary` | Disable autosummary
+`R1(config-router)# passive-interface g0/0`| Configure interface g0/0 to stop routing updates from transmitting updates, but still be included in them
+`R1(config-router)# default-information originate` | Configure R1 to originate default information to share with other routers using RIP
+|
+_**Configure RIPng**_
+`R1(config)# ipv6 unicast-routing` |
+`R1(config)# int g0/0`|
+`R1(config-if)# ipv6 rip RIP-AS enable`| Configure interface g0/0 for RIPng
+|
 _**Enable SSH login**_ |
 `R1(config)#ip domain-name example.com` | Configure the IP domain name of the network
 `R1(config)#crypto key generate rsa general-keys modulus 1024` | Generate SSH secret key modulus 1024
@@ -145,6 +159,7 @@ VERIFY THE CONFIGURATION OF THE DEVICE | Assorted
 `Router1#show file systems` | Lists all of the available file systems
 `Router1#show protocols` | Displays status and interfaces for desired protocol
 `Router1#show version` | Displays system information
+`Router1#show ip protocols` | Displays current IP protocols
 `Router1#show cdp neighbors (detail)` | Displays detailed information about neighboring devices discovered using Cisco Discovery Protocol (CDP)
 `Router1#no cdp run` | Disable CDP globally
 `Router1(config-if)#no cdp enable` | Disable CDP on an interface
